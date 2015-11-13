@@ -1,0 +1,19 @@
+@import hello.model._
+@(books: List[Book])
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>書籍一覧</h1>
+    <ul>
+      @for(book <- books) {
+      <li>@book.id : @book.title</li>
+      }
+    </ul>
+    <h1>新規書籍</h1>
+    <form action="/books" method="post">
+      ID: <input type="text" name="id"></input>
+      タイトル: <input type="text" name="title"></input>
+      <input type="submit"></input>
+    </form>
+  </body>
+</html>

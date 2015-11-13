@@ -1,0 +1,12 @@
+@import scalaz.NonEmptyList
+@(messages: NonEmptyList[String])
+<!DOCTYPE html>
+<html>
+  <body>
+    <ul>
+      @for(message <- messages) {
+        <li>@message</li>
+      }
+    </ul>
+  </body>
+</html>
